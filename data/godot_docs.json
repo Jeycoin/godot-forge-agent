@@ -1,0 +1,38 @@
+[
+  {
+    "document_id": "GODOT-PROJECT-4",
+    "title": "Godot 4 工程与主场景",
+    "topic": "project",
+    "content": "Godot 4 工程必须包含 project.godot，application/run/main_scene 指向主场景。文本场景使用 gd_scene format 3，脚本通过 ext_resource 引用 res://scripts/main.gd。"
+  },
+  {
+    "document_id": "GODOT-PHYSICS-4",
+    "title": "CharacterBody2D 移动",
+    "topic": "gameplay",
+    "content": "Godot 4 的 CharacterBody2D 在 _physics_process 中设置 velocity 并调用 move_and_slide。玩家输入应归一化，避免斜向速度增加。敌人可以根据目标 global_position 计算追踪方向。"
+  },
+  {
+    "document_id": "GODOT-SIGNAL-4",
+    "title": "信号与游戏状态",
+    "topic": "gameplay",
+    "content": "使用 signal died 和 died.connect 处理角色死亡。游戏结束后停止生成器和敌人逻辑，通过 get_tree().reload_current_scene 重开当前场景。"
+  },
+  {
+    "document_id": "GODOT-UI-4",
+    "title": "CanvasLayer 游戏界面",
+    "topic": "ui",
+    "content": "CanvasLayer 用于独立于世界坐标显示 HUD。Label 可以显示生命值、分数和敌人数量，游戏结束时显示提示与重开按键。"
+  },
+  {
+    "document_id": "GODOT-HEADLESS-4",
+    "title": "Headless 自动验证",
+    "topic": "testing",
+    "content": "使用 godot --headless --path 工程目录 -- --smoke-test 运行无窗口验证。游戏脚本通过 OS.get_cmdline_user_args 识别参数，检查关键节点后打印 SMOKE_TEST_OK 并调用 get_tree().quit。"
+  },
+  {
+    "document_id": "GODOT-SECURITY-4",
+    "title": "生成代码安全约束",
+    "topic": "security",
+    "content": "Agent 只能写入目标工作区内的 project.godot、README.md、scenes 和 scripts。禁止路径穿越、任意 shell 命令以及 OS.execute。Godot 进程使用固定参数数组和超时，不通过 shell 拼接命令。"
+  }
+]

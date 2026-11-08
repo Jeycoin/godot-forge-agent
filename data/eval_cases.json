@@ -1,0 +1,10 @@
+[
+  {
+    "case_id": "gamejam-survival-prototype",
+    "request": "为 Game Jam 做一个 2D 俯视角生存原型，包含玩家移动、敌人追踪、血量和计分"
+  },
+  {
+    "case_id": "godot-headless-reproducibility",
+    "request": "生成可用 Godot 4 运行并通过 Headless 冒烟测试的 2D 生存小游戏"
+  }
+]
